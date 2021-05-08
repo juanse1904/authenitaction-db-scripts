@@ -24,25 +24,11 @@ db.createCollection("posts",{
             bsonType: "date",
             description: "creation post date. Must be a date and is required"
           },
-          : {
+          link: {
             bsonType: "string",
-            description: "user password. Must be a string and is required"
+            description: "link media post, Must be a string"
           },
-          bio: {
-            bsonType: "string",
-            description: "user bio. Must be a string"
-          },
-          picture: {
-            bsonType: "string",
-            description: "user picture link. Must be a string"
-          },
-          posts: {
-            bsonType: "array",
-            description: "user posts. Must be an array with the object ids",
-            items: {
-                bsonType: "objectId"
-            }
-          },
+          
           schema_version: {
             bsonType: "string",
             description: "Current schema version. Must be a string and is required"
@@ -54,5 +40,5 @@ db.createCollection("posts",{
     validationAction: "error",
   });
   
-  db["user"].createIndex( { "email": 1}, { name: "email_unique", collation: {locale: "en", strength: 2}, unique: true } )
+ 
   
