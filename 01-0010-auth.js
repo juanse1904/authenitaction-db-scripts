@@ -2,7 +2,7 @@
 	Proyect: authentication app
 	Objetive: create the changelog collection
 	Developer: Juan Sebastián Gómez
-	Fecha: 15/02/2021
+	Fecha: 08/05/2021
 -------------------------------------------*/
 
 db.createCollection("changelog",{
