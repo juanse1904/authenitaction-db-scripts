@@ -9,7 +9,7 @@ db.createCollection("changelog",{
     validator: {
       $jsonSchema: {
         bsonType: "object",
-        required: [ "_id", "type", "collection", "recordid", "user", "schema_version"],
+        required: [ "_id", "type", "collection", "recordid", "schema_version"],
         additionalProperties: false,
         properties: {
           _id: {
@@ -37,10 +37,6 @@ db.createCollection("changelog",{
           newdocument: {
             bsonType: "object",
             description: "New document with the files after upgrade. Must be an object"
-          },
-          user: {
-            bsonType: "objectId",
-            description: "FK _id collection user. Must be an ObjectId and is required"
           },
           schema_version: {
             bsonType: "string",
