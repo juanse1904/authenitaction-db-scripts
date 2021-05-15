@@ -28,6 +28,10 @@ db.createCollection("posts",{
             bsonType: "string",
             description: "link media post, Must be a string"
           },
+          user: {
+            bsonType: "objectId",
+            description: "FK by the user collection, Must be a ObjectID"
+          },
           
           schema_version: {
             bsonType: "string",

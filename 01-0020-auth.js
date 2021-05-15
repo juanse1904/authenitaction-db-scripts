@@ -20,6 +20,10 @@ db.createCollection("user",{
             bsonType: "string",
             description: "user name. Must be a string and is required"
           },
+          phonenumber: {
+            bsonType: "string",
+            description: "user phonenumber. Must be a string if it is exist"
+          },
           email: {
             bsonType: "string",
             description: "user email. Must be a string and is required"
