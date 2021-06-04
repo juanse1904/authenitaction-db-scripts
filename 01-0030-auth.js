@@ -9,7 +9,7 @@ db.createCollection("posts",{
     validator: {
       $jsonSchema: {
         bsonType: "object",
-        required: [ "_id", "content","date","schema_version"],
+        required: [ "_id", "content","date","schema_version", "user"],
         additionalProperties: false,
         properties: {
           _id: {
